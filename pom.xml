@@ -16,6 +16,14 @@
     <description>WebJar for DataTables</description>
     <url>http://webjars.org</url>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>1.8.2</version>
+        </dependency>
+    </dependencies>
+
     <licenses>
         <license>
             <name>BSD (3-point)</name>
@@ -83,7 +91,10 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/DataTables-${upstreamVersion}" />
+                                    <fileset dir="${project.build.directory}/DataTables-${upstreamVersion}">
+                                        <include name="media/js/**" />
+                                        <exclude name="media/js/jquery.js" />
+                                    </fileset>
                                 </move>
                             </target>
                         </configuration>
@@ -96,6 +107,12 @@
                 <version>2.3.2</version>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <targetPath>${destDir}</targetPath>
+            </resource>
+        </resources>
     </build>
 
     <profiles>
