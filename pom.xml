@@ -94,6 +94,7 @@
                                     <fileset dir="${project.build.directory}/DataTables-${upstreamVersion}">
                                         <include name="media/js/**" />
                                         <exclude name="media/js/jquery.js" />
+                                        <include name="media/css/jquery*" />
                                     </fileset>
                                 </move>
                             </target>
