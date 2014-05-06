@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>datatables</artifactId>
-    <version>1.10.0-beta-3-SNAPSHOT</version>
+    <version>1.10.0-SNAPSHOT</version>
     <name>DataTables</name>
     <description>WebJar for DataTables</description>
     <url>http://webjars.org</url>
@@ -54,9 +54,14 @@
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstreamVersion>1.10.0-beta.2</upstreamVersion>
+        <upstreamVersion>1.10.0</upstreamVersion>
         <sourceUrl>http://datatables.net/releases</sourceUrl>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
+        <requirejs>
+            {
+                "shim": { "jquery.dataTables": [ "jquery" ] }
+            }
+        </requirejs>
     </properties>
     
     <build>
@@ -91,11 +96,11 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/DataTables ${upstreamVersion}">
-                                        <include name="media/js/**" />
-                                        <exclude name="media/js/jquery.js" />
-                                        <include name="media/css/jquery*" />
-                                        <include name="media/images/*.png" />
+                                    <fileset dir="${project.build.directory}/DataTables-${upstreamVersion}/media">
+                                        <include name="js/**" />
+                                        <exclude name="js/jquery.js" />
+                                        <include name="css/jquery*" />
+                                        <include name="images/*.png" />
                                     </fileset>
                                 </move>
                             </target>
