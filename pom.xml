@@ -59,8 +59,7 @@
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
         <requirejs>
             {
-                paths: { 'jquery.dataTables': webjars.path('datatables', 'media/js/jquery.dataTables')  },
-                shim : { 'jquery.dataTables': [ 'jquery' ] }
+                paths: { 'datatables': webjars.path('datatables', 'media/js/jquery.dataTables')  },
             }
         </requirejs>
     </properties>
