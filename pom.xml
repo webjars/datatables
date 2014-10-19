@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>datatables</artifactId>
-    <version>1.10.3-SNAPSHOT</version>
+    <version>1.10.2-1-SNAPSHOT</version>
     <name>DataTables</name>
     <description>WebJar for DataTables</description>
     <url>http://webjars.org</url>
@@ -26,13 +26,8 @@
 
     <licenses>
         <license>
-            <name>BSD (3-point)</name>
-            <url>http://datatables.net/license_bsd</url>
-            <distribution>repo</distribution>
-        </license>
-        <license>
-            <name>GPL v2</name>
-            <url>http://datatables.net/license_gpl2</url>
+            <name>MIT</name>
+            <url>http://datatables.net/license/mit</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
