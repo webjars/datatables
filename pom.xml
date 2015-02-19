@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>datatables</artifactId>
-    <version>1.10.5</version>
+    <version>1.10.6-SNAPSHOT</version>
     <name>DataTables</name>
     <description>WebJar for DataTables</description>
     <url>http://webjars.org</url>
@@ -36,7 +36,7 @@
         <url>http://github.com/webjars/datatables</url>
         <connection>scm:git:https://github.com/webjars/datatables.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/datatables.git</developerConnection>
-        <tag>datatables-1.10.5</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <developers>
