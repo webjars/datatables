@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>datatables</artifactId>
-    <version>1.10.6-SNAPSHOT</version>
+    <version>1.10.6</version>
     <name>DataTables</name>
     <description>WebJar for DataTables</description>
     <url>http://webjars.org</url>
@@ -36,7 +36,7 @@
         <url>http://github.com/webjars/datatables</url>
         <connection>scm:git:https://github.com/webjars/datatables.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/datatables.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>datatables-1.10.6</tag>
     </scm>
 
     <developers>
@@ -88,15 +88,15 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="unzip archive"/>
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
-                                <echo message="moving resources"/>
+                                <echo message="unzip archive" />
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
+                                <echo message="moving resources" />
                                 <move todir="${destDir}">
                                     <fileset dir="${project.build.directory}/DataTables-${upstreamVersion}/media">
-                                        <include name="js/**"/>
-                                        <exclude name="js/jquery.js"/>
-                                        <include name="css/jquery*"/>
-                                        <include name="images/*.png"/>
+                                        <include name="js/**" />
+                                        <exclude name="js/jquery.js" />
+                                        <include name="css/jquery*" />
+                                        <include name="images/*.png" />
                                     </fileset>
                                 </move>
                             </target>
