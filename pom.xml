@@ -49,7 +49,7 @@
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstreamVersion>1.10.5</upstreamVersion>
+        <upstreamVersion>1.10.6</upstreamVersion>
         <sourceUrl>http://datatables.net/releases</sourceUrl>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
         <requirejs>
@@ -88,15 +88,15 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="unzip archive" />
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
-                                <echo message="moving resources" />
+                                <echo message="unzip archive"/>
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
+                                <echo message="moving resources"/>
                                 <move todir="${destDir}">
                                     <fileset dir="${project.build.directory}/DataTables-${upstreamVersion}/media">
-                                        <include name="js/**" />
-                                        <exclude name="js/jquery.js" />
-                                        <include name="css/jquery*" />
-                                        <include name="images/*.png" />
+                                        <include name="js/**"/>
+                                        <exclude name="js/jquery.js"/>
+                                        <include name="css/jquery*"/>
+                                        <include name="images/*.png"/>
                                     </fileset>
                                 </move>
                             </target>
@@ -107,12 +107,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.5</version>
+                <version>2.5.1</version>
             </plugin>
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.5.1</version>
+                <version>1.6.5</version>
                 <extensions>true</extensions>
                 <configuration>
                     <serverId>sonatype-nexus-staging</serverId>
