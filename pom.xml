@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>datatables</artifactId>
-    <version>2.1.9-SNAPSHOT</version>
+    <version>2.3.0-SNAPSHOT</version>
     <name>DataTables</name>
     <description>WebJar for DataTables</description>
     <url>http://webjars.org</url>
